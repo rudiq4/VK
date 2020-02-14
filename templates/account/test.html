@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+</head>
+<body>
+
+{% if user.is_authenticated %}
+    <h2>Якшо ти бачиш цей текст, ти залогінений  <span>{{user.get_username}}</span></h2>
+    {{request.user.first_name}}
+{% else %}
+    <h1>Текст для анонімусів</h1>
+{% endif %}
+
+</body>
+</html>

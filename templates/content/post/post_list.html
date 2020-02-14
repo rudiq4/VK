@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Список постів{% endblock %}
+{% block content %}
+    <h1>Список постів</h1>
+    {% for post in posts %}
+        <div>
+            <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a>[{{ post.author }}]</h4>
+            <img src="{{ post.image}}" alt="post image">
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{#<h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>#}

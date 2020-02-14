@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Мій профіль{% endblock %}
+{% block content %}
+    <h1>Мій профіль</h1>
+    <p>
+        Ви можете <a href="{% url "edit" %}">Відредагувати свій профіль</a> або
+        <a href="{% url "password_change" %}">Змінити свій пароль</a>.
+    </p>
+    <p><a href="{% url "add_post" %}">Добавити пост</a></p>
+    <p><a href="{% url "post_list" %}">Список постів</a></p>
+    <h2>Стрічка новин</h2>
+    <div id="action-list">
+        {% for action in actions %}
+            {% include "actions/action/detail.html" %}
+        {% endfor %}
+    </div>
+{% endblock %}

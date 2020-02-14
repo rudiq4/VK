@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Пароль змінений{% endblock %}
+{% block content %}
+    <h1>Пароль змінений</h1>
+    <p>Ваш пароль змінений. Ви можете
+        <a href="{% url "login" %}">увійти зараз</a>.</p>
+{% endblock %}
